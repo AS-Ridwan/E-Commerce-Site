@@ -9,19 +9,20 @@
 
 /* === COMMON STYLE START === */
 h1 {
-  font-size: 50px;
+  font-size: 80px;
+  font-weight: 900;
   line-height: 64px;
   color: #222;
 }
 
 h2 {
-  font-size: 46px;
+  font-size: 80px;
   line-height: 54px;
   color: #222;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 25px;
   color: #222;
 }
 
@@ -31,7 +32,7 @@ h6 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   color: #465b52;
   margin: 15px 0 20px 0;
 }
@@ -79,18 +80,25 @@ body {
 #navbar li a.active {
   color: #088178;
 }
-#navbar li a.active::after,
-#navbar li a:hover::after {
+#navbar li a::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
   background: #088178;
   bottom: -4px;
   left: 0;
+  transition: 0.4s ease-in-out;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  width: 100%;
+}
+#navbar li a .icon-first:hover {
+  color: #088178;
 }
 .icon {
-  width: 25px !important;
+  width: 30px !important;
   color: #1a1a1a;
 }
 #mobile {
@@ -99,6 +107,9 @@ body {
 
 /* Responsive part */
 @media (max-width: 799px) {
+  #header {
+    padding: 20px 40px;
+  }
   #navbar {
     display: flex;
     flex-direction: column;
@@ -111,7 +122,7 @@ body {
     right: -300px;
     background-color: #e3e6f3;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.3);
-    padding: 60px 0 0 10px;
+    padding: 80px 0 0 10px;
     transition: 0.3s;
   }
   #navbar.active {
@@ -137,5 +148,42 @@ body {
     width: 25px;
   }
 }
-
 /* === Header part end === */
+
+/* Home Page */
+#hero {
+  background-image: url("./img/hero4.png");
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#hero h4 {
+  padding-bottom: 20px;
+}
+#hero h2 {
+  padding-bottom: 20px;
+}
+
+#hero h1 {
+  color: #088178;
+  padding-bottom: 15px;
+}
+
+#hero button {
+  background-image: url("./img/button.png");
+  padding: 14px 70px 14px 65px;
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
