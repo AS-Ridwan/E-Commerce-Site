@@ -54,6 +54,19 @@ body {
 .title {
   margin-bottom: 50px;
 }
+.btn {
+  padding: 20px 30px;
+  font-size: 16px;
+  border: 1px solid var(--secondry);
+  color: #ffff;
+  background-color: var(--secondry);
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.btn:hover {
+  background-color: #ffff;
+  color: var(--secondry);
+}
 /* === COMMON STYLE END === */
 
 /* side scroll design */
@@ -436,4 +449,62 @@ figcaption:hover div {
 #banner-m .btn:hover {
   background-color: #ffff;
   color: var(--secondry);
+}
+
+/* sm banner */
+#sm-banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(./img/banner/b18.jpg);
+  width: 49%;
+  min-width: 300px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+#sm-banner .banner-box-2 {
+  background-image: url(./img/banner/b16.jpg);
+}
+#sm-banner h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+#sm-banner h2 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+}
+#sm-banner span {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+#sm-banner .sm-btn-lt {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+#sm-banner .sm-btn-lt:hover {
+  color: #ffff;
+  background-color: var(--primary);
+  border: 1px solid #fff;
+}
+#sm-banner .sm-btn-rt {
+  background-color: var(--primary);
+  border: 1px solid #fff;
+}
+#sm-banner .sm-btn-rt:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #ffff;
 }
