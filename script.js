@@ -24,3 +24,11 @@ bar.onclick = function () {
   bar.classList.toggle("active");
   nav.classList.toggle("active");
 };
+
+// screen preloader
+// screen preloader
+let loader = document.getElementById("preloader");
+
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
